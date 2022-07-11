@@ -1,0 +1,8 @@
+#!/bin/bash
+
+NC='\033[0m'
+BBlue='\033[1;34m'
+
+echo -e "${BBlue}Running php-cs-fixer... ${NC}"
+
+./vendor/bin/php-cs-fixer fix -q
