@@ -3,6 +3,13 @@
 NC='\033[0m'
 BBlue='\033[1;34m'
 
+echo -e "${BBlue}Running laravel-ide-helper... ${NC}"
+
+php artisan ide-helper:generate -q
+php artisan ide-helper:eloquent -q
+php artisan ide-helper:meta -q
+php artisan ide-helper:models -W -r -q
+
 echo -e "${BBlue}Running php-cs-fixer... ${NC}"
 
 ./vendor/bin/php-cs-fixer fix -q
